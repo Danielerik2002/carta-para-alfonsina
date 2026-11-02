@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Alfonsina ❤️</title>
+<style>
+:root {
+  --wine: #6f1d35;
+  --gold: #d9b978;
+  --cream: #f7efe6;
+}
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(ellipse at 50% 15%, rgba(111,29,53,.38), transparent 48%),
+    linear-gradient(145deg,#09090c,#171116 55%,#09090c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  overflow-x: hidden;
+}
+
+.glow {
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(133,36,64,.12);
+  filter: blur(75px);
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.wrap {
+  width: min(720px,100%);
+  text-align: center;
+  position: relative;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  font: 11px Arial,sans-serif;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: clamp(42px,9vw,76px);
+  font-weight: 400;
+  line-height: 1.02;
+  margin: 0;
+  color: #fff4e9;
+}
+
+h1 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.rule {
+  width: 76px;
+  height: 1px;
+  background: var(--gold);
+  margin: 28px auto;
+  opacity: .8;
+}
+
+.intro {
+  color: #d8c9c2;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 510px;
+  margin: 0 auto 30px;
+}
+
+button {
+  border: 1px solid rgba(217,185,120,.75);
+  color: var(--cream);
+  background: linear-gradient(135deg,rgba(111,29,53,.85),rgba(53,20,33,.9));
+  padding: 15px 27px;
+  border-radius: 2px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font: 11px Arial,sans-serif;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px #0008;
+  border-color: #f0d49b;
+}
+
+.letter {
+  display: none;
+  text-align: left;
+  margin: 34px auto 0;
+  padding: clamp(24px,5vw,42px);
+  max-width: 620px;
+  border: 1px solid rgba(217,185,120,.32);
+  background: linear-gradient(145deg,rgba(35,23,29,.94),rgba(17,16,20,.96));
+  box-shadow: 0 25px 80px #0008;
+  animation: appear .7s ease both;
+}
+
+.letter.open { display: block; }
+
+.letter .to {
+  color: var(--gold);
+  font-style: italic;
+  font-size: 22px;
+  margin: 0 0 24px;
+}
+
+.letter p {
+  color: #e5d9d2;
+  font-size: 17px;
+  line-height: 1.9;
+  margin: 0 0 17px;
+}
+
+.signature {
+  color: var(--gold)!important;
+  font-style: italic;
+  font-size: 21px!important;
+  margin-top: 26px!important;
+}
+
+.note {
+  color: #93847e;
+  font: 10px Arial,sans-serif;
+  letter-spacing: .12em;
+  margin-top: 30px;
+}
+
+.heart {
+  color: #b65a70;
+  font-size: 17px;
+  margin: 24px 0 8px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:480px) {
+  .intro { font-size: 16px; }
+  .letter p { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+<div class="glow"></div>
+
+<main class="wrap">
+  <div class="eyebrow">Una carta desde el corazón</div>
+
+  <h1>Para <span>Alfonsina</span></h1>
+
+  <div class="rule"></div>
+
+  <p class="intro">
+    Hay cosas que merecen decirse con calma,
+    con sinceridad y desde lo más profundo del corazón.
+  </p>
+
+  <button id="openBtn" type="button">
+    Abrir mi carta
+  </button>
+
+  <article class="letter" id="letter">
+    <h2 class="to">Mi querida Alfonsina:</h2>
+
+    <p>
+      No quiero que estas palabras sean solamente una forma
+      de pedir perdón. Quiero que sepas que reconozco que pude
+      haberte lastimado, y lamento de corazón haberte hecho
+      sentir así.
+    </p>
+
+    <p>
+      No voy a justificar mis errores ni a pedirte que los
+      olvides de un momento a otro. Sé que las palabras por
+      sí solas no reparan lo que duele. Quiero aprender de
+      lo que pasó y demostrarte con hechos que puedo hacerlo mejor.
+    </p>
+
+    <p>
+      Me importas muchísimo. Valoro tu cariño, tu compañía
+      y cada momento que compartimos. No espero que esta carta
+      lo arregle todo; solo deseo que sea el comienzo de una
+      conversación sincera, cuando tú te sientas lista.
+    </p>
+
+    <p>
+      Perdóname por lo que hice y por cómo te hice sentir.
+      Voy a escuchar lo que tengas que decirme, respetar tu
+      tiempo y esforzarme por cuidar mejor de nosotros.
+    </p>
+
+    <p class="signature">
+      Con todo mi cariño,<br>
+      Daniel <span aria-hidden="true">♥</span>
+    </p>
+  </article>
+
+  <div class="heart">✦</div>
+  <div class="note">HECHA CON CARIÑO, PARA ALGUIEN ESPECIAL</div>
+</main>
+
+<script>
+const button = document.getElementById('openBtn');
+const letter = document.getElementById('letter');
+
+button.addEventListener('click', () => {
+  const isOpen = letter.classList.toggle('open');
+
+  button.textContent = isOpen
+    ? 'Cerrar mi carta'
+    : 'Abrir mi carta';
+
+  if (isOpen) {
+    letter.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+});
+</script>
+
+</body>
+</html>
